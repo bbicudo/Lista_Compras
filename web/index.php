@@ -8,6 +8,9 @@ $sql = "SELECT * FROM products";
 
 $products = $conn->select($sql);
 
-foreach ($products as $product) {
-    var_dump($product);
-}
+?>
+
+
+
+
+
