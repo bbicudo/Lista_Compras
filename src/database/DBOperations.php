@@ -1,8 +1,8 @@
 <?php
 
-namespace ListaCompras\Database;
+namespace ListaCompras\database;
 
-use ListaCompras\Config\DBConnect;
+use ListaCompras\config\DBConnect;
 
 class DBOperations extends DBConnect {
 
@@ -18,7 +18,7 @@ class DBOperations extends DBConnect {
         $query=self::getConnection()->prepare($sql);
         $query->execute($params);
          
-        $rs = $query->fetchAll(\PDO::FETCH_OBJ) or die(print_r($query->errorInfo(), true));
+        $rs = $query->fetchAll(\PDO::FETCH_OBJ);
         self::__destruct();
         return $rs;
     }

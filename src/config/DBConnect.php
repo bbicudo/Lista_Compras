@@ -1,6 +1,6 @@
 <?php
 
-namespace ListaCompras\Config;
+namespace ListaCompras\config;
 
 abstract class DBConnect {
 
@@ -73,7 +73,7 @@ abstract class DBConnect {
       try {
         self::$PDO = new \PDO("mysql:host=" . self::$host . ";port=". self::$port . ";dbname=" . self::$db, self::$user, self::$password, $options);
       } catch (\PDOException $e) {
-        print "Erro: " . $e->getMessage();
+        print "Error: " . $e->getMessage();
       }
     }
       return self::$PDO;
