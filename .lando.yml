@@ -1,4 +1,8 @@
 name: lista-de-compras
 recipe: lamp
 config:
+  php: '8.0'
+  composer_version: '2.2.12'
+  via: apache:2.4
   webroot: web
+  database: mysql:5.7
