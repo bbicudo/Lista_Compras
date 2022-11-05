@@ -1,0 +1,15 @@
+{
+    "name": "eiras/listacompras",
+    "description": "Lista de Compras.",
+    "autoload": {
+        "psr-4": {
+            "ListaCompras\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Branco Bicudo"
+        }
+    ],
+    "require": {}
+}

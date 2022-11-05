@@ -1,0 +1,4 @@
+name: lista-de-compras
+recipe: lamp
+config:
+  webroot: web
