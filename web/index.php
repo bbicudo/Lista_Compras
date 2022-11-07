@@ -28,18 +28,13 @@ function test_input($data) {
 function check_login($login, $password) {
     $conn = new ListaCompras\database\DBOperations();
 
-    $sql = "SELECT * FROM users WHERE user_login = ?";
-    $params = ["$login"];
+    $sql = "SELECT * FROM users WHERE user_login = ? AND user_password =?";
+    $params = ["$login", "$password"];
 
     $result = $conn->select($sql, $params);
 
     if (!empty($result)) {
-        foreach ($result as $auth)
-        if ($auth->user_password === $password) {
             return TRUE;
-        }
-
-        return FALSE;
     }
 
     return FALSE;
